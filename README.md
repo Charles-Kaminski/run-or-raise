@@ -163,7 +163,12 @@ You can combine multiple modes by appending a colon. On the first hit, we regist
 ```
 <Super>i:raise-or-register:move-window-to-active-workspace
 ```
-
+#### `match-cmdline`
+Use the launch command to match a windows to a shortcut. Some applications do not honor WM_CLASS or keep a consistent window title. For example, Firefox installed via Snap on Ubuntu will not be distinguishable using traditional matching. Using match-cmdline allows you to differentiate between Firefox profiles as seen below.
+  ```
+    <Super>w:match-cmdline,firefox -P work -no-remote,,
+    <Super>p:match-cmdline,firefox -P personal -no-remote,,
+  ```
 #### `isolate-workspace`
 Switch windows on the active workspace only
   ```

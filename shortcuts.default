@@ -1,3 +1,7 @@
+
+# Go to https://github.com/CZ-NIC/run-or-raise/blob/main/README.md for 
+# documentation of additional functionality you can use below.
+
 # Here you list all the shortcuts. To reload, turn the extension off and on.
 #
 # The shortcuts may be defined in two ways:
@@ -22,6 +26,11 @@
 # This line cycles any open gnome-terminal (matched by wm_class = Gnome-terminal on Ubuntu 17.10) OR if not found, launches new one.
 # If you're using Arch, you may want to match by wm_class = gnome-terminal-server , just check yourself by Alt+F2/lg/Windows
 <Super>r,gnome-terminal,Gnome-terminal,
+# These lines match based on the full command line used to launch the window.
+# Useful for profile switching with Firefox on Snap implementations (such as Ubuntu) since they ignore wm_class and dynamically
+# change the title.
+<Super>w:match-cmdline,firefox -P work -no-remote,,
+<Super>p:match-cmdline,firefox -P personal -no-remote,,
 
 
 # You may use regular expression in title or wm_class.

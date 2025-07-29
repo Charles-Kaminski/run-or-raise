@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="gnome-shell-extensions">
   <schema path="/org/gnome/shell/extensions/run-or-raise/" id="org.gnome.shell.extensions.run-or-raise">
+    <key type="b" name="match-cmdline">
+      <default>false</default>
+      <summary>Use the launch command to match a window to raise.</summary>
+      <description>Useful for applications that do not honor WM_CLASS or keep a consistent window title. 
+      For example, Firefox profiles running via Snap on Ubuntu will not be distinguishable 
+      using either MW_CLASS or a window title.  Using match-cmdline allows you to 
+      match "firefox -P work -no-remote,," vs "firefox -P personal -no-remote,,"
+      </description>
+    </key>
     <key type="b" name="dbus">
       <default>false</default>
       <summary>Listen on DBus</summary>
